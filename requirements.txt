@@ -1,0 +1,10 @@
+# Database and API clients
+supabase>=2.0.0
+sqlalchemy>=2.0.0
+psycopg2-binary>=2.9.0
+
+# Data processing
+pandas>=2.0.0
+
+# Environment management
+python-dotenv>=1.0.0
