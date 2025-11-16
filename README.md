@@ -1,6 +1,6 @@
 # Talent Match Intelligence
 
-Python project for analyzing talent data using Supabase and PostgreSQL.
+Python project for talent data analysis that integrates with Supabase as the SQL backend for data retrieval and processing.
 
 ## Setup
 
