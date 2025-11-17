@@ -5,10 +5,11 @@ from dotenv import load_dotenv
 load_dotenv()
 url = os.getenv("DATABASE_URL")
 
-print("Testing:", url)
+print("Testing connection...")
 
 try:
     conn = psycopg2.connect(url)
-    print("SUCCESS: Connected to Supabase PostgreSQL")
+    print("SUCCESS: Connected to database")
+    conn.close()
 except Exception as e:
-    print("ERROR OCCURRED:", e)
+    print(f"ERROR: {e}")

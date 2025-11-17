@@ -23,8 +23,11 @@ def get_supabase_client() -> Client:
     return _supabase_client
 
 
-def fetch_table(table_name: str) -> Any:
-    """Fetch all records from a Supabase table."""
+def fetch_table(table_name: str, limit: int = None) -> Any:
+    """Fetch records from a Supabase table."""
     supabase = get_supabase_client()
-    response = supabase.table(table_name).select("*").execute()
+    query = supabase.table(table_name).select("*")
+    if limit:
+        query = query.limit(limit)
+    response = query.execute()
     return response.data

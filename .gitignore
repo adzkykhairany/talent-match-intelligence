@@ -8,3 +8,5 @@ venv/
 
 .vscode/
 .idea/
+
+*__init__.py
